@@ -1,0 +1,16 @@
+exclude .flake8
+exclude .pre-commit-config.yaml
+exclude noxfile.py
+
+include README.md
+include LICENSE
+
+recursive-include docs *.md
+recursive-include docs *.rst
+recursive-include docs *.png
+recursive-include docs *.py
+
+recursive-include src *.conf
+recursive-include src *.html
+recursive-include src *.css
+recursive-include src *.js
