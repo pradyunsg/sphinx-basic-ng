@@ -1,6 +1,5 @@
 """Development automation."""
 
-import datetime
 import glob
 import os
 import shutil
@@ -69,14 +68,14 @@ def get_release_versions(version_file):
         for line in f:
             if line.startswith(marker):
                 version = line[len(marker) + 1 : -2]
-                current_number = int(version.split(".dev")[-1])
+                current_version, current_dev_number = version.split(".dev")
                 break
         else:
             raise RuntimeError("Could not find current version.")
 
-    today = datetime.date.today()
-    release_version = today.strftime(f"%Y.%m.%d.beta{current_number}")
-    next_version = today.strftime(f"%Y.%m.%d.dev{current_number+1}")
+    next_dev_number = int(current_dev_number) + 1
+    release_version = f"{current_version}.a{next_dev_number}"
+    next_version = f"{current_version}.dev{next_dev_number}"
 
     return release_version, next_version
 
