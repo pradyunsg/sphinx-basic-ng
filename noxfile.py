@@ -3,6 +3,7 @@
 import datetime
 import glob
 import os
+import shutil
 import tempfile
 
 import nox
@@ -89,7 +90,7 @@ def release(session):
 
     release_version, next_version = get_release_versions(version_file)
 
-    session.install("flit", "twine", "release-helper")
+    session.install("build", "twine", "release-helper")
 
     # Sanity Checks
     session.run("release-helper", "version-check-validity", release_version)
@@ -110,7 +111,9 @@ def release(session):
     )
 
     # Build the package
-    session.run("flit", "build")
+    if os.path.exists("build"):
+        shutil.rmtree("build")
+    session.run("python", "-m", "build")
     session.run("twine", "check", *glob.glob("dist/*"))
 
     # Tag the commit
