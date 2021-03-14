@@ -76,7 +76,6 @@ article {
 [role="main"] {
   padding: 0 2rem;
   box-sizing: border-box;
-  width: 100%;
 }
 .sb-site-sidebar {
   display: none;
@@ -84,9 +83,15 @@ article {
 .sb-content-sidebar {
   display: none;
 }
+.sb-article-container {
+  width: 100%;
+}
 
 /* Tablet views */
 @media (min-width: 42rem) {
+  .sb-article-container {
+    width: auto;
+  }
   [role="main"] {
     width: 42rem;
   }
