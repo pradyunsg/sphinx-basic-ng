@@ -1,0 +1,139 @@
+/* Some sane resets. */
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+/* All the flexbox magic! */
+body,
+.sb-announcement,
+.sb-content,
+.sb-main,
+.sb-container,
+.sb-container__inner,
+.sb-article-container,
+.sb-header {
+  display: flex;
+}
+
+/* These order things vertically */
+body,
+.sb-main,
+.sb-article-container {
+  flex-direction: column;
+}
+
+/* Put elements in the center */
+.sb-announcement, .sb-header, .sb-container, .sb-content {
+  justify-content: center;
+}
+/* Put elements at the ends */
+.sb-article-container {
+  justify-content: space-between;
+}
+
+/* These elements grow. */
+.sb-main, .sb-content, .sb-container, article {
+  flex-grow: 1;
+}
+
+/* Because padding making this wider is not fun */
+article {
+  box-sizing: border-box;
+}
+
+/* The announcements element should never be wider than the page. */
+.sb-announcement {
+  height: 3rem;
+  max-width: 100%;
+}
+
+.sb-site-sidebar, .sb-content-sidebar {
+  overflow-y: auto;
+  flex-shrink: 0;
+  width: 17rem;
+}
+
+.sb-announcement__inner {
+  justify-content: center;
+
+  box-sizing: border-box;
+  height: 3rem;
+
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+/* Mobile views */
+.sb-page-width {
+  width: 100%;
+}
+
+[role="main"] {
+  padding: 0 2rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+.sb-site-sidebar {
+  display: none;
+}
+.sb-content-sidebar {
+  display: none;
+}
+
+/* Tablet views */
+@media (min-width: 42rem) {
+  [role="main"] {
+    width: 42rem;
+  }
+}
+@media (min-width: 46rem) {
+  [role="main"] {
+    width: 46rem;
+  }
+}
+
+/* Tablet views */
+@media (min-width: 59rem) {
+  .sb-content-sidebar {
+    display: block;
+  }
+  [role="main"] {
+    width: 42rem;
+  }
+}
+@media (min-width: 63rem) {
+  [role="main"] {
+    width: 46rem;
+  }
+}
+
+/* Desktop views */
+@media (min-width: 76rem) {
+  .sb-site-sidebar {
+    display: block;
+  }
+  [role="main"] {
+    width: 42rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  [role="main"] {
+    width: 46rem;
+  }
+}
+
+/* Wide desktop views */
+@media (min-width: 80rem) {
+  [role="main"] {
+    width: 46rem;
+  }
+  .sb-page-width {
+    width: 80rem;
+  }
+}

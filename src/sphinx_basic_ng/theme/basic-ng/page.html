@@ -1,1 +1,50 @@
 {# Layout: This is used by _every_ Sphinx content page #}
+{% extends "layout.html" %}
+
+{% block body %}
+{% block announcement %}
+<div class="sb-announcement">
+  {% include "elements/announcement.html" %}
+</div>
+{% endblock %}
+{% block header %}
+<header class="sb-header">
+  <div class="sb-header__inner sb-page-width">
+    {% include "elements/header.html" %}
+  </div>
+</header>
+{% endblock %}
+<div class="sb-container">
+  <div class="sb-container__inner sb-page-width">
+    {% block site_sidebar %}
+    <aside class="sb-site-sidebar">
+      {% include "elements/site-nav.html" %}
+    </aside>
+    {% endblock %}
+    <main class="sb-main">
+      <div class="sb-content">
+        {% block content %}
+        <div class="sb-article-container">
+          <article role="main">
+            {{ body }}
+          </article>
+          <div class="sb-article-footer">
+            {% include "elements/next-prev.html" %}
+          </div>
+        </div>
+        {% endblock %}
+        {% block content_sidebar %}
+        <aside class="sb-content-sidebar">
+          {% include "elements/content-nav.html" %}
+        </aside>
+        {% endblock %}
+      </div>
+      {% block footer %}
+      <footer class="sb-footer">
+        {% include "elements/footer.html" %}
+      </footer>
+      {% endblock %}
+    </main>
+  </div>
+</div>
+{% endblock body %}

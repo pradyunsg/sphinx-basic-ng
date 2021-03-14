@@ -1,3 +1,40 @@
+/*
+  This CSS file should be overridden by the theme authors. It's
+  meant for debugging and developing the skeleton that this theme provides.
+*/
 body {
-  color: green;
+  font-family: -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  background: lightskyblue;
+}
+.sb-announcement {
+  background-color: #333;
+}
+.sb-announcement__inner {
+  background-color: black;
+  color: white;
+}
+.sb-header {
+  background: aqua;
+}
+.sb-header__inner {
+  background: cornflowerblue;
+  color: white;
+}
+.sb-site-sidebar {
+  background: lightgreen;
+}
+.sb-main {
+  background: salmon;
+}
+.sb-main__inner {
+  background-color: antiquewhite;
+}
+.sb-article-container {
+  background: white;
+}
+.sb-content-sidebar {
+  background: lightgoldenrodyellow;
+}
+.sb-footer {
+  background: sandybrown;
 }
