@@ -13,11 +13,19 @@ body {
   background-color: black;
   color: white;
 }
-.sb-header {
+.sb-topbar {
   background: aqua;
 }
-.sb-header__inner {
+.sb-topbar__left {
   background: cornflowerblue;
+  color: white;
+}
+.sb-topbar__middle {
+  background: rgb(78, 134, 236);
+  color: white;
+}
+.sb-topbar__right {
+  background: rgb(33, 104, 235);
   color: white;
 }
 .sb-site-sidebar {
@@ -32,7 +40,7 @@ body {
 .sb-article-container {
   background: white;
 }
-.sb-content-sidebar {
+.sb-sidebar-right {
   background: lightgoldenrodyellow;
 }
 .sb-footer {

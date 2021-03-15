@@ -22,6 +22,13 @@ def _html_page_context(
     if "sidebar_width" not in context:
         context["sidebar_width"] = "15rem"
 
+    # If theme components are given as strings, convert to lists
+    components = ["theme_announcement", "theme_topbar_left", "theme_topbar_right", "theme_sidebar_left", "theme_sidebar_right",
+    "theme_middle_content", "theme_footer"]
+    for component in components:
+        if isinstance(context.get(component), str):
+            context[component] = [ii.strip() for ii in context.get(component).split(",")]
+
 
 def setup(app: sphinx.application.Sphinx) -> Dict[str, Any]:
     """Entry point for sphinx theming."""

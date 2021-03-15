@@ -3,46 +3,89 @@
 
 {% block body %}
 {% block announcement %}
+{% if theme_announcement %}
 <div class="sb-announcement">
-  {% include "elements/announcement.html" %}
+{%- for template in theme_announcement %}
+{%- include template %}
+{%- endfor %}
 </div>
+{% endif %}
 {% endblock %}
-{% block header %}
-<header class="sb-header">
-  <div class="sb-header__inner sb-page-width">
-    {% include "elements/header.html" %}
+{% block topbar %}
+{% if theme_topbar_left or theme_topbar_middle or theme_topbar_right %}
+<header class="sb-topbar">
+  {% if theme_topbar_left %}
+  <div class="sb-topbar__left sb-page-width">
+    {%- for template in theme_topbar_left %}
+    {%- include template %}
+    {%- endfor %}
   </div>
+  {% endif %}
+  {% if theme_topbar_middle %}
+  <div class="sb-topbar__middle sb-page-width">
+    {%- for template in theme_topbar_middle %}
+    {%- include template %}
+    {%- endfor %}
+  </div>
+  {% endif %}
+  {% if theme_topbar_right %}
+  <div class="sb-topbar__right sb-page-width">
+    {%- for template in theme_topbar_right %}
+    {%- include template %}
+    {%- endfor %}
+  </div>
+  {% endif %}
 </header>
+{% endif %}
 {% endblock %}
 <div class="sb-container">
   <div class="sb-container__inner sb-page-width">
     {% block site_sidebar %}
-    <aside class="sb-site-sidebar">
-      {% include "elements/site-nav.html" %}
+    {% if theme_sidebar_left %}
+    <aside class="sb-site-sidebar">  
+      {%- for template in theme_sidebar_left %}
+      {%- include template %}
+      {%- endfor %}
     </aside>
+    {% endif %}
     {% endblock %}
     <main class="sb-main">
-      <div class="sb-content">
         {% block content %}
-        <div class="sb-article-container">
-          <article role="main">
-            {{ body }}
-          </article>
-          <div class="sb-article-footer">
-            {% include "elements/next-prev.html" %}
+          {% if theme_middle_content %}
+          <div class="sb-content">
+            {%- for template in theme_middle_content %}
+            {%- include template %}
+            {%- endfor %}
           </div>
-        </div>
+          {% endif %}
+        {% endblock %}
+        {% block content_footer %}
+          {% if theme_content_footer %}
+          <div class="sb-article-footer">
+            {%- for template in theme_content_footer %}
+            {%- include template %}
+            {%- endfor %}
+          </div>
+          {% endif %}
         {% endblock %}
         {% block content_sidebar %}
-        <aside class="sb-content-sidebar">
-          {% include "elements/content-nav.html" %}
+        {% if theme_sidebar_right %}
+        <aside class="sb-sidebar-right">
+          {%- for template in theme_sidebar_right %}
+          {%- include template %}
+          {%- endfor %}
         </aside>
+        {% endif %}
         {% endblock %}
-      </div>
+      
       {% block footer %}
+      {% if theme_footer %}
       <footer class="sb-footer">
-        {% include "elements/footer.html" %}
+        {%- for template in theme_footer %}
+        {%- include template %}
+        {%- endfor %}
       </footer>
+      {% endif %}
       {% endblock %}
     </main>
   </div>
