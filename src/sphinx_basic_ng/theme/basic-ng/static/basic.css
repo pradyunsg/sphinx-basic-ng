@@ -8,10 +8,10 @@ body {
 }
 .sb-announcement {
   background-color: #333;
+  color: white;
 }
 .sb-announcement__inner {
   background-color: black;
-  color: white;
 }
 .sb-header {
   background: aqua;
@@ -20,7 +20,10 @@ body {
   background: cornflowerblue;
   color: white;
 }
-.sb-site-sidebar {
+.sb-primary-sidebar {
+  background: darkgreen;
+}
+.sb-primary-sidebar__inner {
   background: lightgreen;
 }
 .sb-main {
@@ -32,9 +35,18 @@ body {
 .sb-article-container {
   background: white;
 }
-.sb-content-sidebar {
-  background: lightgoldenrodyellow;
+.sb-secondary-sidebar {
+  background: gold;
+}
+.sb-secondary-sidebar__inner {
+  background: lightyellow;
+}
+.sb-article-footer {
+  background: cornsilk;
 }
 .sb-footer {
+  background: brown;
+}
+.sb-footer__inner {
   background: sandybrown;
 }

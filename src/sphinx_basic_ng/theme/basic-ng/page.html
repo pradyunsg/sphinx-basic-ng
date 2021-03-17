@@ -15,17 +15,19 @@
 </header>
 {% endblock %}
 <div class="sb-container">
-  <div class="sb-container__inner sb-page-width">
-    {% block site_sidebar %}
-    <aside class="sb-site-sidebar">
-      {% include "elements/site-nav.html" %}
+  <div class="sb-container__inner">
+    {% block primary_sidebar %}
+    <aside class="sb-primary-sidebar stick-to-content">
+      <div class="sb-primary-sidebar__inner">
+        {% include "elements/primary-sidebar.html" %}
+      </div>
     </aside>
     {% endblock %}
     <main class="sb-main">
       <div class="sb-content">
         {% block content %}
         <div class="sb-article-container">
-          <article role="main">
+          <article class="sb-article" role="main">
             {{ body }}
           </article>
           <div class="sb-article-footer">
@@ -33,15 +35,19 @@
           </div>
         </div>
         {% endblock %}
-        {% block content_sidebar %}
-        <aside class="sb-content-sidebar">
-          {% include "elements/content-nav.html" %}
+        {% block secondary_sidebar %}
+        <aside class="sb-secondary-sidebar">
+          <div class="sb-secondary-sidebar__inner">
+            {% include "elements/secondary-sidebar.html" %}
+          </div>
         </aside>
         {% endblock %}
       </div>
       {% block footer %}
       <footer class="sb-footer">
-        {% include "elements/footer.html" %}
+        <div class="sb-footer__inner">
+          {% include "elements/footer.html" %}
+        </div>
       </footer>
       {% endblock %}
     </main>
