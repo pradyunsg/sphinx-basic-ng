@@ -4,13 +4,13 @@
 {% block body %}
 {% block announcement %}
 <div class="sb-announcement">
-  {% include "elements/announcement.html" %}
+  {% include "sections/announcement.html" %}
 </div>
 {% endblock %}
 {% block header %}
 <header class="sb-header">
   <div class="sb-header__inner sb-page-width">
-    {% include "elements/header.html" %}
+    {% include "sections/header.html" %}
   </div>
 </header>
 {% endblock %}
@@ -19,7 +19,7 @@
     {% block primary_sidebar %}
     <aside class="sb-primary-sidebar stick-to-content">
       <div class="sb-primary-sidebar__inner">
-        {% include "elements/primary-sidebar.html" %}
+        {% include "sections/primary-sidebar.html" %}
       </div>
     </aside>
     {% endblock %}
@@ -31,14 +31,14 @@
             {{ body }}
           </article>
           <div class="sb-article-footer">
-            {% include "elements/next-prev.html" %}
+            {% include "sections/next-prev.html" %}
           </div>
         </div>
         {% endblock %}
         {% block secondary_sidebar %}
         <aside class="sb-secondary-sidebar">
           <div class="sb-secondary-sidebar__inner">
-            {% include "elements/secondary-sidebar.html" %}
+            {% include "sections/secondary-sidebar.html" %}
           </div>
         </aside>
         {% endblock %}
@@ -46,7 +46,7 @@
       {% block footer %}
       <footer class="sb-footer">
         <div class="sb-footer__inner">
-          {% include "elements/footer.html" %}
+          {% include "sections/footer.html" %}
         </div>
       </footer>
       {% endblock %}
