@@ -1,0 +1,18 @@
+/*
+  This CSS file should be overridden by the theme authors. It's
+  meant for debugging and developing the skeleton that this theme provides.
+*/
+body {
+  font-family: -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  background-color: white;
+}
+.sb-header {
+  width: 100%;
+  position: fixed;
+  height: 60px;
+  background: white;
+  box-shadow: 0 .125rem .25rem 0 rgba(0,0,0,.11);
+}
+.sb-container {
+  padding-top: 80px;
+}
