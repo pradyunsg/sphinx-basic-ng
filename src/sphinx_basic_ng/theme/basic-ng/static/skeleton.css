@@ -52,7 +52,7 @@ article {
   max-width: 100%;
 }
 
-.sb-site-sidebar, .sb-content-sidebar {
+.sb-sidebar-primary, .sb-sidebar-secondary {
   overflow-y: auto;
   flex-shrink: 0;
   width: 17rem;
@@ -77,10 +77,10 @@ article {
   padding: 0 2rem;
   box-sizing: border-box;
 }
-.sb-site-sidebar {
+.sb-sidebar-primary {
   display: none;
 }
-.sb-content-sidebar {
+.sb-sidebar-secondary {
   display: none;
 }
 .sb-article-container {
@@ -104,7 +104,7 @@ article {
 
 /* Tablet views */
 @media (min-width: 59rem) {
-  .sb-content-sidebar {
+  .sb-sidebar-secondary {
     display: block;
   }
   [role="main"] {
@@ -119,7 +119,7 @@ article {
 
 /* Desktop views */
 @media (min-width: 76rem) {
-  .sb-site-sidebar {
+  .sb-sidebar-primary {
     display: block;
   }
   [role="main"] {

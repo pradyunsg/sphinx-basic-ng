@@ -4,21 +4,21 @@
 {% block body %}
 {% block announcement %}
 <div class="sb-announcement">
-  {% include "elements/announcement.html" %}
+  {% include "sections/announcement.html" %}
 </div>
 {% endblock %}
 {% block header %}
 <header class="sb-header">
   <div class="sb-header__inner sb-page-width">
-    {% include "elements/header.html" %}
+    {% include "sections/header.html" %}
   </div>
 </header>
 {% endblock %}
 <div class="sb-container">
   <div class="sb-container__inner sb-page-width">
-    {% block site_sidebar %}
-    <aside class="sb-site-sidebar">
-      {% include "elements/site-nav.html" %}
+    {% block sidebar_primary %}
+    <aside class="sb-sidebar-primary">
+      {% include "sections/sidebar-primary.html" %}
     </aside>
     {% endblock %}
     <main class="sb-main">
@@ -26,22 +26,22 @@
         {% block content %}
         <div class="sb-article-container">
           <article role="main">
-            {{ body }}
+            {% include "sections/article-main.html" %}
           </article>
           <div class="sb-article-footer">
-            {% include "elements/next-prev.html" %}
+            {% include "sections/article-footer.html" %}
           </div>
         </div>
         {% endblock %}
-        {% block content_sidebar %}
-        <aside class="sb-content-sidebar">
-          {% include "elements/content-nav.html" %}
+        {% block sidebar_secondary %}
+        <aside class="sb-sidebar-secondary">
+          {% include "sections/sidebar-secondary.html" %}
         </aside>
         {% endblock %}
       </div>
       {% block footer %}
-      <footer class="sb-footer">
-        {% include "elements/footer.html" %}
+      <footer class="sb-site-footer">
+        {% include "sections/site-footer.html" %}
       </footer>
       {% endblock %}
     </main>
