@@ -22,3 +22,4 @@ extensions = ["myst_parser"]
 #
 
 html_theme = "basic-ng"
+templates_path = ["_templates"]
