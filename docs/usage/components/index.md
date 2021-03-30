@@ -7,4 +7,5 @@ This section describes all of the components provided by this theme.
 
 breadcrumbs
 ethical-ads
+logo
 ```
