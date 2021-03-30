@@ -11,12 +11,12 @@ Below is a sample Table of Contents.
 ```{toctree}
 :glob:
 
-section-one/*
+section-one/index
 ```
 
 ```{toctree}
 :glob:
-:caption: Section 2
+:caption: Caption
 
-section-two/*
+section-two/index
 ```
