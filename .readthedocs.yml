@@ -9,4 +9,4 @@ sphinx:
 python:
   version: 3.7
   install:
-    - .[docs]
+    - requirements: docs/requirements.txt

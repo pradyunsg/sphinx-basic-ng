@@ -1,0 +1,4 @@
+# This file primarily exists to allow ReadTheDocs to install this package
+# with the "docs" extra. The actual dependency information is held
+# in `pyproject.toml`.
+.[docs]
