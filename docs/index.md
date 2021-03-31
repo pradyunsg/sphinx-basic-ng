@@ -27,4 +27,5 @@ development/index
 design/index
 changelog
 license
+GitHub <https://github.com/pradyunsg/sphinx-basic-ng/>
 ```
