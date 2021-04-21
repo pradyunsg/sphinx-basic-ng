@@ -16,7 +16,10 @@ body,
 .sb-container,
 .sb-container__inner,
 .sb-article-container,
-.sb-header {
+.sb-footer-content,
+.sb-header,
+.sb-header-secondary,
+.sb-footer {
   display: flex;
 }
 
@@ -28,7 +31,13 @@ body,
 }
 
 /* Put elements in the center */
-.sb-announcement, .sb-header, .sb-container, .sb-content {
+.sb-announcement,
+.sb-header,
+.sb-header-secondary,
+.sb-container,
+.sb-content,
+.sb-footer,
+.sb-footer-content {
   justify-content: center;
 }
 /* Put elements at the ends */
@@ -48,7 +57,6 @@ article {
 
 /* The announcements element should never be wider than the page. */
 .sb-announcement {
-  height: 3rem;
   max-width: 100%;
 }
 
@@ -68,13 +76,18 @@ article {
   white-space: nowrap;
 }
 
+/* Hide the sidebar toggle checkboxes */
+.sb-sidebar-toggle {
+  display: none;
+}
+
 /* Mobile views */
 .sb-page-width {
   width: 100%;
 }
 
 [role="main"] {
-  padding: 0 2rem;
+  padding: 0 1rem;
   box-sizing: border-box;
 }
 .sb-sidebar-primary {
@@ -83,7 +96,7 @@ article {
 .sb-sidebar-secondary {
   display: none;
 }
-.sb-article-container {
+.sb-article-container, .sb-footer-content__inner {
   width: 100%;
 }
 
@@ -92,11 +105,18 @@ article {
   .sb-article-container {
     width: auto;
   }
-  [role="main"] {
+  .sb-footer-content__inner {
     width: 42rem;
+  }
+  [role="main"] {
+  padding: 0 2rem;
+  width: 42rem;
   }
 }
 @media (min-width: 46rem) {
+  .sb-footer-content__inner {
+    width: 46rem;
+  }
   [role="main"] {
     width: 46rem;
   }
@@ -107,11 +127,17 @@ article {
   .sb-sidebar-secondary {
     display: block;
   }
+  .sb-footer-content__inner {
+    width: 59rem;
+  }
   [role="main"] {
     width: 42rem;
   }
 }
 @media (min-width: 63rem) {
+  .sb-footer-content__inner {
+    width: 63rem;
+  }
   [role="main"] {
     width: 46rem;
   }
@@ -122,14 +148,11 @@ article {
   .sb-sidebar-primary {
     display: block;
   }
+  .sb-footer-content__inner {
+    width: 59rem;
+  }
   [role="main"] {
     width: 42rem;
-  }
-}
-
-@media (min-width: 80rem) {
-  [role="main"] {
-    width: 46rem;
   }
 }
 
@@ -137,6 +160,9 @@ article {
 @media (min-width: 80rem) {
   [role="main"] {
     width: 46rem;
+  }
+  .sb-footer-content__inner {
+    width: 63rem;
   }
   .sb-page-width {
     width: 80rem;

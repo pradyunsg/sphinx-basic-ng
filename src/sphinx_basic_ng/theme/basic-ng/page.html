@@ -14,6 +14,14 @@
   </div>
 </header>
 {% endblock %}
+{% block header_secondary %}
+<header class="sb-header-secondary">
+  <div class="sb-header-secondary__inner sb-page-width">
+    {% include "sections/header-secondary.html" %}
+  </div>
+</header>
+{% endblock %}
+
 <div class="sb-container">
   <div class="sb-container__inner sb-page-width">
     {% block sidebar_primary %}
@@ -26,11 +34,11 @@
         {% block content %}
         <div class="sb-article-container">
           <article role="main">
-            {% include "sections/article-main.html" %}
+            {% include "sections/article.html" %}
           </article>
-          <div class="sb-article-footer">
-            {% include "sections/article-footer.html" %}
-          </div>
+          <footer class="sb-footer-article">
+            {% include "sections/footer-article.html" %}
+          </footer>
         </div>
         {% endblock %}
         {% block sidebar_secondary %}
@@ -39,12 +47,21 @@
         </aside>
         {% endblock %}
       </div>
-      {% block footer %}
-      <footer class="sb-site-footer">
-        {% include "sections/site-footer.html" %}
-      </footer>
-      {% endblock %}
+    {% block footer_content %}
+    <footer class="sb-footer-content">
+      <div class="sb-footer-content__inner">
+        {% include "sections/footer-content.html" %}
+      </div>
+    </footer>
+    {% endblock %}
     </main>
   </div>
 </div>
+{% block footer %}
+<footer class="sb-footer">
+  <div class="sb-footer__inner sb-page-width">
+    {% include "sections/footer.html" %}
+  </div>
+</footer>
+{% endblock %}
 {% endblock body %}
