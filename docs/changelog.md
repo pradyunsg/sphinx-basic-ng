@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.0.1.a2
+## 0.0.1.alpha2
 
 - Add initial documentation scaffolding.
 - Add component: breadcrumbs
@@ -10,6 +10,6 @@
 - Remove Sphinx variables from skeleton.
 - Updating terminology for parts of this project.
 
-## 0.0.1.a1
+## 0.0.1.alpha1
 
 Initial release.
