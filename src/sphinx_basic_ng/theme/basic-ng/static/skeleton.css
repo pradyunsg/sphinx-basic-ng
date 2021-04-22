@@ -46,7 +46,10 @@ body,
 }
 
 /* These elements grow. */
-.sb-main, .sb-content, .sb-container, article {
+.sb-main,
+.sb-content,
+.sb-container,
+article {
   flex-grow: 1;
 }
 
@@ -60,7 +63,8 @@ article {
   max-width: 100%;
 }
 
-.sb-sidebar-primary, .sb-sidebar-secondary {
+.sb-sidebar-primary,
+.sb-sidebar-secondary {
   overflow-y: auto;
   flex-shrink: 0;
   width: 17rem;
@@ -76,9 +80,54 @@ article {
   white-space: nowrap;
 }
 
-/* Hide the sidebar toggle checkboxes */
+/* Sidebars, with checkbox-based toggle */
+.sb-sidebar-primary,
+.sb-sidebar-secondary {
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  top: 0;
+}
+
+.sb-sidebar-primary {
+  left: -17rem;
+  transition: left 250ms ease-in-out;
+}
+.sb-sidebar-secondary {
+  right: -17rem;
+  transition: right 250ms ease-in-out;
+}
+
 .sb-sidebar-toggle {
   display: none;
+}
+.sb-sidebar-overlay {
+  position: fixed;
+  top: 0;
+  width: 0;
+  height: 0;
+
+  transition: width 0ms, height 0ms, opacity 250ms ease-out;
+
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.54);
+}
+
+#sb-sidebar-toggle--primary:checked ~ .sb-sidebar-overlay[for="sb-sidebar-toggle--primary"] {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+#sb-sidebar-toggle--primary:checked ~ .sb-container .sb-sidebar-primary {
+  left: 0;
+}
+#sb-sidebar-toggle--secondary:checked ~ .sb-sidebar-overlay[for="sb-sidebar-toggle--secondary"] {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+#sb-sidebar-toggle--secondary:checked ~ .sb-container .sb-sidebar-secondary {
+  right: 0;
 }
 
 /* Mobile views */
@@ -90,13 +139,9 @@ article {
   padding: 0 1rem;
   box-sizing: border-box;
 }
-.sb-sidebar-primary {
-  display: none;
-}
-.sb-sidebar-secondary {
-  display: none;
-}
-.sb-article-container, .sb-footer-content__inner {
+
+.sb-article-container,
+.sb-footer-content__inner {
   width: 100%;
 }
 
@@ -109,8 +154,8 @@ article {
     width: 42rem;
   }
   [role="main"] {
-  padding: 0 2rem;
-  width: 42rem;
+    padding: 0 2rem;
+    width: 42rem;
   }
 }
 @media (min-width: 46rem) {
@@ -125,7 +170,10 @@ article {
 /* Tablet views */
 @media (min-width: 59rem) {
   .sb-sidebar-secondary {
-    display: block;
+    position: static;
+  }
+  label[for="sb-sidebar-toggle--secondary"] {
+    display: none;
   }
   .sb-footer-content__inner {
     width: 59rem;
@@ -146,7 +194,10 @@ article {
 /* Desktop views */
 @media (min-width: 76rem) {
   .sb-sidebar-primary {
-    display: block;
+    position: static;
+  }
+  label[for="sb-sidebar-toggle--primary"] {
+    display: none;
   }
   .sb-footer-content__inner {
     width: 59rem;

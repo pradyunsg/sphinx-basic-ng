@@ -22,6 +22,11 @@
 </header>
 {% endblock %}
 
+<input type="checkbox" class="sb-sidebar-toggle" name="sb-sidebar-toggle--primary" id="sb-sidebar-toggle--primary">
+<input type="checkbox" class="sb-sidebar-toggle" name="sb-sidebar-toggle--secondary" id="sb-sidebar-toggle--secondary">
+<label class="sb-sidebar-overlay" for="sb-sidebar-toggle--primary"></label>
+<label class="sb-sidebar-overlay" for="sb-sidebar-toggle--secondary"></label>
+
 <div class="sb-container">
   <div class="sb-container__inner sb-page-width">
     {% block sidebar_primary %}
