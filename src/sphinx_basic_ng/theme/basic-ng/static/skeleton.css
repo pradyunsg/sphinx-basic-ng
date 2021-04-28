@@ -172,7 +172,7 @@ article {
   .sb-sidebar-secondary {
     position: static;
   }
-  label[for="sb-sidebar-toggle--secondary"] {
+  .hide-when-secondary-sidebar-shown {
     display: none;
   }
   .sb-footer-content__inner {
@@ -196,7 +196,7 @@ article {
   .sb-sidebar-primary {
     position: static;
   }
-  label[for="sb-sidebar-toggle--primary"] {
+  .hide-when-primary-sidebar-shown {
     display: none;
   }
   .sb-footer-content__inner {
