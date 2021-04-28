@@ -10,6 +10,7 @@ edit-this-page
 ethical-ads
 logo
 related-pages
+search-input
 search-hide
 sidebar-toggles
 ```
