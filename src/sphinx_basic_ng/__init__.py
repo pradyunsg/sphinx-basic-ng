@@ -1,6 +1,6 @@
 """A modern skeleton for Sphinx themes."""
 
-__version__ = "0.0.1.dev3"
+__version__ = "0.0.1.a4"
 
 from pathlib import Path
 import sphinx
