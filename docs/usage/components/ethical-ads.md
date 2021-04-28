@@ -16,6 +16,8 @@ where you expect them to be visible.
 {% include "components/ethical-ads.html" %}
 ```
 
+This will add an empty `div` tag, which would be populated by ReadTheDocs.
+
 It is also expected that the page will [manually load ads]. This is done
 for pages hosted by ReadTheDocs automatically.
 
