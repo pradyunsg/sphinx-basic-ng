@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.0.1.alpha4
+
+- Add component: search-input
+- Add component: search-hide
+- Add components for toggling sidebars
+
 ## 0.0.1.alpha3
 
 - Add a nice introduction to `sections/article.html`
