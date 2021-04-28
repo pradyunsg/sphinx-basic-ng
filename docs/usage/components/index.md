@@ -10,4 +10,5 @@ edit-this-page
 ethical-ads
 logo
 related-pages
+sidebar-toggles
 ```
