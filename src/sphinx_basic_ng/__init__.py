@@ -3,9 +3,9 @@
 __version__ = "0.0.1.dev4"
 
 from pathlib import Path
-import sphinx
 from typing import Any, Dict
 
+import sphinx
 
 _THEME_PATH = (Path(__file__).parent / "theme" / "basic-ng").resolve()
 
