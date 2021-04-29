@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.1.alpha5
+
+- Allow omitting skeleton.css, via html-context.
+
 ## 0.0.1.alpha4
 
 - Add component: search-input
