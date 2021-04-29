@@ -41,7 +41,9 @@
   {% endblock head_links -%}
 
   {% block head_stylesheets -%}
-
+  {% if not omit_skeleton_css -%}
+    <link rel="stylesheet" href="{{ pathto('_static/skeleton.css', 1) }}" type="text/css" />
+  {%- endif %}
   <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
   <link rel="stylesheet" href="{{ pathto('_static/' + style, 1)|e }}" type="text/css" />
   {% for css in css_files -%}

@@ -28,7 +28,6 @@ def setup(app: sphinx.application.Sphinx) -> Dict[str, Any]:
     app.require_sphinx("3.0")
 
     app.add_html_theme("basic-ng", str(_THEME_PATH))
-    app.add_css_file("skeleton.css")
 
     app.connect("html-page-context", _html_page_context)
 
