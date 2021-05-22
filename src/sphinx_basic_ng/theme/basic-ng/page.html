@@ -38,6 +38,9 @@
       <div class="sb-content">
         {% block content %}
         <div class="sb-article-container">
+          <header class="sb-header-article">
+            {% include "sections/header-article.html" %}
+          </header>
           <article role="main">
             {% include "sections/article.html" %}
           </article>
