@@ -9,7 +9,7 @@ repos:
     rev: 5.6.4
     hooks:
       - id: isort
-        files: \.py$
+        args: ["--profile", "black", "--filter-files"]
 
   - repo: https://gitlab.com/pycqa/flake8
     rev: 3.8.4
