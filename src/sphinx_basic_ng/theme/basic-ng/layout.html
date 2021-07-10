@@ -8,6 +8,7 @@
   {% if not skip_ua_compatible -%}
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
   {%- endif -%}
+
   {{ metatags }}
 
   {% endblock head_meta -%}
@@ -43,9 +44,8 @@
   {% block head_stylesheets -%}
   {% if not omit_skeleton_css -%}
     <link rel="stylesheet" href="{{ pathto('_static/skeleton.css', 1) }}" type="text/css" />
-  {%- endif %}
-  <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
-  <link rel="stylesheet" href="{{ pathto('_static/' + style, 1)|e }}" type="text/css" />
+  {%- endif -%}
+
   {% for css in css_files -%}
     {%- if css|attr("filename") -%}
       {{ css_tag(css) }}
@@ -57,12 +57,9 @@
   {%- endblock head_stylesheets -%}
 
   {% block head_javascript -%}
-
-  <script id="documentation_options" data-url_root="{{ url_root }}" src="{{ pathto('_static/documentation_options.js', 1) }}"></script>
   {% for js in script_files -%}
     {{ js_tag(js) }}
   {% endfor -%}
-
   {%- endblock head_javascript -%}
 
   {% block head_extra %}{% endblock %}
