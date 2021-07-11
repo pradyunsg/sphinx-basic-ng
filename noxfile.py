@@ -49,6 +49,42 @@ def docs(session):
     session.run("sphinx-build", "-b", "dirhtml", "-v", "docs/", "build/docs")
 
 
+@nox.session(name="example-live", reuse_venv=True)
+def example_live(session):
+    session.install("-e", ".")
+    session.install("-r", "example/requirements.txt")
+
+    with tempfile.TemporaryDirectory() as destination:
+        session.run(
+            "sphinx-autobuild",
+            # for sphinx-autobuild
+            "--port=0",
+            "--watch=src/",
+            "--open-browser",
+            # for sphinx
+            "-b=dirhtml",
+            "-a",
+            "example",
+            destination,
+            env={"PYTHONPATH": "example"},
+        )
+
+
+@nox.session(reuse_venv=True)
+def example(session):
+    session.install("-e", ".")
+    session.install("-r", "example/requirements.txt")
+
+    session.run(
+        "sphinx-build",
+        "-b=dirhtml",
+        "-v",
+        "example",
+        "build/example-docs",
+        env={"PYTHONPATH": "example"},
+    )
+
+
 @nox.session(reuse_venv=True)
 def lint(session):
     session.install("pre-commit")

@@ -1,0 +1,209 @@
+/*
+  This file doesn't really do much, and shouldn't be used as a basis of a theme.
+  However, hopefully this does demonstrate that theme authors still need to
+  write their own CSS for their theme.
+*/
+
+body {
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji";
+}
+@media screen and (min-width: 1080px) {
+  html {
+    font-size: 110%;
+  }
+}
+
+/*
+  Announcement
+*/
+.site-announcement {
+  background-color: #111;
+  color: white;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*
+  Header
+*/
+.sb-header label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  width: 2rem;
+}
+
+@media (max-width: 76rem) {
+  .sb-header {
+    border-bottom: 1px solid lightgray;
+    height: 2rem;
+  }
+  .sb-header label[for="sb-sidebar-toggle--primary"] {
+    float: left;
+  }
+  .sb-header label[for="sb-sidebar-toggle--secondary"] {
+    float: right;
+  }
+}
+
+/*
+  Content
+*/
+h1 {
+  margin-top: 1.5rem;
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.75rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.25rem;
+}
+h5 {
+  font-size: 1.125rem;
+}
+h6 {
+  text-transform: uppercase;
+}
+h1 .headerlink,
+h2 .headerlink,
+h3 .headerlink,
+h4 .headerlink,
+h5 .headerlink,
+h6 .headerlink {
+  visibility: hidden;
+  text-decoration: none;
+}
+h1:hover .headerlink,
+h2:hover .headerlink,
+h3:hover .headerlink,
+h4:hover .headerlink,
+h5:hover .headerlink,
+h6:hover .headerlink {
+  visibility: visible;
+}
+
+/* Links */
+a[href] {
+  color: #0275d8;
+  text-decoration: none;
+}
+a[href]:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+
+/*
+  Sidebar (left)
+*/
+.sb-sidebar-primary {
+  background: white;
+}
+/* Site name */
+.site-name {
+  margin: 1rem 2rem;
+  font-size: 1.25rem;
+}
+.site-name a {
+  color: inherit;
+}
+.site-name a:hover {
+  text-decoration: none;
+}
+
+/* Search */
+.search-container {
+  margin: 1rem 2rem;
+}
+.search-input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.5rem;
+
+  font-size: 0.75rem;
+
+  border: 0;
+  border-radius: 0.25rem;
+
+  background: #f8f9fa;
+  color: black;
+}
+
+/* TOC tree */
+.toctree-container {
+  margin: 1rem 2rem;
+  font-size: 0.875rem;
+}
+.toctree-container ul {
+  list-style: none;
+  padding-left: 1rem;
+  margin: 0;
+}
+.toctree-container ul > li {
+  padding: 0;
+  padding-top: 0.5rem;
+}
+.toctree-container > ul {
+  padding-left: 0;
+}
+.toctree-container > ul:first-child > li:first-child {
+  padding-top: 0;
+}
+.toctree-container p.caption {
+  margin-bottom: 0;
+}
+
+/*
+  Sidebar (right)
+*/
+.sb-sidebar-secondary {
+  background: white;
+}
+/* Table of contents */
+.toc-container ul {
+  font-size: 0.875rem;
+  list-style: none;
+  padding-left: 1rem;
+}
+.toc-container li {
+  padding-top: 0.325rem;
+}
+
+/*
+  Page footer
+*/
+.related-pages {
+  height: 3rem;
+  margin: 1rem 0;
+}
+.related-pages .context {
+  font-size: 0.75rem;
+  color: gray;
+}
+.related-pages a:hover {
+  text-decoration: none;
+}
+.related-pages a:hover .title {
+  text-decoration: underline;
+}
+.related-pages .next-page {
+  height: 3rem;
+  max-width: 50%;
+  float: right;
+  clear: right;
+  text-align: right;
+}
+.related-pages .prev-page {
+  height: 3rem;
+  max-width: 50%;
+  float: left;
+  clear: left;
+  text-align: left;
+}
