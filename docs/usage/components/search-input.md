@@ -5,8 +5,7 @@ Sphinx provides offline search to allow users to search the generated documentat
 ## Usage
 
 ```jinja
-{% include "components/toggle-sidebar-primary.html" %}
-{% include "components/toggle-sidebar-secondary.html" %}
+{% include "components/search-input.html" %}
 ```
 
 This will add a single `form.search-container`, containing a single `input.search-input` with the translated placeholder text: "Search". Pressing {kbd}`Enter` in this element redirects the user to the search page, with the appropriate query parameters.
