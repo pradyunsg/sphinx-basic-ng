@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.1.alpha6
+
+- Add additional breakpoint of 50rem (800px) for content width.
+
 ## 0.0.1.alpha5
 
 - Allow omitting skeleton.css, via html-context.
