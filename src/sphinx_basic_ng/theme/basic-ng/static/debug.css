@@ -36,11 +36,14 @@ body {
 .sb-main__inner {
   background-color: antiquewhite;
 }
+.sb-header-article {
+  background-color: lightsteelblue;
+}
 .sb-article-main {
   background: white;
 }
 .sb-footer-article {
-  background: gainsboro;
+  background: lightpink;
 }
 .sb-sidebar-secondary {
   background: lightgoldenrodyellow;
