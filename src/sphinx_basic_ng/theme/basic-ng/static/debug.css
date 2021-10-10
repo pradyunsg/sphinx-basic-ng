@@ -3,7 +3,8 @@
   meant for debugging and developing the skeleton that this theme provides.
 */
 body {
-  font-family: -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji";
   background: lavender;
 }
 .sb-announcement {
@@ -60,6 +61,6 @@ body {
 .sb-footer__inner {
   background: salmon;
 }
-[role=main] {
+[role="main"] {
   background: white;
 }
