@@ -64,7 +64,6 @@ article {
 
 .sb-sidebar-primary,
 .sb-sidebar-secondary {
-  overflow-y: auto;
   flex-shrink: 0;
   width: 17rem;
 }
@@ -84,7 +83,6 @@ article {
 .sb-sidebar-secondary {
   position: fixed;
   height: 100%;
-  overflow: auto;
   top: 0;
 }
 
