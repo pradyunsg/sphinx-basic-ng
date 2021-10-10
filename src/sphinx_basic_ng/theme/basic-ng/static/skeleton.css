@@ -167,6 +167,14 @@ article {
     width: 46rem;
   }
 }
+@media (min-width: 50rem) {
+  .sb-footer-content__inner {
+    width: 50rem;
+  }
+  [role="main"] {
+    width: 50rem;
+  }
+}
 
 /* Tablet views */
 @media (min-width: 59rem) {
@@ -191,6 +199,14 @@ article {
     width: 46rem;
   }
 }
+@media (min-width: 67rem) {
+  .sb-footer-content__inner {
+    width: 67rem;
+  }
+  [role="main"] {
+    width: 50rem;
+  }
+}
 
 /* Desktop views */
 @media (min-width: 76rem) {
@@ -208,7 +224,7 @@ article {
   }
 }
 
-/* Wide desktop views */
+/* Full desktop views */
 @media (min-width: 80rem) {
   [role="main"] {
     width: 46rem;
@@ -216,7 +232,16 @@ article {
   .sb-footer-content__inner {
     width: 63rem;
   }
+}
+
+@media (min-width: 84rem) {
+  [role="main"] {
+    width: 50rem;
+  }
+  .sb-footer-content__inner {
+    width: 67rem;
+  }
   .sb-page-width {
-    width: 80rem;
+    width: 84rem;
   }
 }
