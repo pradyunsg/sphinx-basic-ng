@@ -1,8 +1,17 @@
 # Changelog
 
-## 0.0.1.alpha6
+## 0.0.1.alpha7
 
 - Add additional breakpoint of 50rem (800px) for content width.
+
+## 0.0.1.alpha6
+
+- Bump up to Sphinx 4
+- Add example documentation, with an inline theme
+- Add header-article section
+- Add `!important` for the hiding of sidebar toggles
+- Fix the search input example
+- Tweak announcement container, to not be centered
 
 ## 0.0.1.alpha5
 
