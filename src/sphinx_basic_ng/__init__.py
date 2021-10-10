@@ -1,6 +1,6 @@
 """A modern skeleton for Sphinx themes."""
 
-__version__ = "0.0.1.a7"
+__version__ = "0.0.1.dev7"
 
 from pathlib import Path
 from typing import Any, Dict
