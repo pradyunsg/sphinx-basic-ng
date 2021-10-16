@@ -2,13 +2,9 @@
 <nav aria-label="Breadcrumb" class="breadcrumb-nav">
   <ol class="breadcrumb-nav-list">
     {% for item in parents %}
-    <li class="breadcrumb-nav-list-item">
-      <a href="{{ item.link }}">{{ item.title }}</a>
-    </li>
+    <li class="breadcrumb-nav-list-item"><a href="{{ item.link }}">{{ item.title }}</a></li>
     {% endfor %}
-    <li class="breadcrumb-nav-list-item">
-      <span>{{ title }}</span>
-    </li>
+    <li class="breadcrumb-nav-list-item"><span>{{ title }}</span></li>
   </ol>
 </nav>
 {% endif %}
