@@ -55,6 +55,7 @@ todo_include_todos = True
 #
 myst_enable_extensions = [
     "deflist",
+    "colon_fence",
 ]
 myst_heading_anchors = 3
 
