@@ -18,7 +18,9 @@ nox.options.sessions = ["lint", "docs"]
 def docs_live(session):
     if session.posargs:
         docs_dir, *additional_dependencies = session.posargs
-        assert os.path.exists(docs_dir), "usage: <location> [pip-install-arguments]..."
+        assert os.path.exists(docs_dir) and all(
+            not arg[0] == "-" for arg in additional_dependencies
+        ), "usage: <location> [pip-install-arguments]..."
     else:
         docs_dir = "docs/"
         additional_dependencies = ()
@@ -36,6 +38,7 @@ def docs_live(session):
             # for sphinx
             "-b=dirhtml",
             "-a",
+            "-v",
             docs_dir,
             destination,
         )
