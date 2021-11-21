@@ -40,5 +40,7 @@
   {%- if not theme_source_branch -%}
     {{ warning("Provided `source_repository` but not `source_branch`. ")}}
   {%- endif -%}
+  {%- if page_source_suffix -%}
   <a href="{{ determine_page_edit_link() }}">{{ _("Edit this page") }}</a>
+  {%- endif -%}
 {%- endif -%}
