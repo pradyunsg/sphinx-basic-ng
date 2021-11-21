@@ -27,6 +27,6 @@ breadcrumbs with this structure.
 
 ## Configurability
 
-None.
+TODO: update to reflect two new configuration options.
 
 [w3schools-breadcrumbs]: https://www.w3schools.com/howto/howto_css_breadcrumbs.asp
