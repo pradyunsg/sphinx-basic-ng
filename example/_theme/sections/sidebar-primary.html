@@ -1,7 +1,35 @@
+{% macro show_entry(entry) %}
+{% if entry.caption %}
+  <p class="caption">{{ entry.caption }}</p>
+  {% for entry in entry.entries %}
+  {{ show_entry(entry) }}
+  {% endfor %}
+{% elif entry.title %}
+  <li><a href="{{ entry.reference }}">{{ entry.title }}</a>
+    {% if entry.entries %}
+    <ul>
+      {% for entry in entry.entries %}
+      {{ show_entry(entry) }}
+      {% endfor %}
+    </ul>
+    {% endif %}
+</li>
+{% elif entry.entries %}
+  {% for entry in entry.entries %}
+  {{ show_entry(entry) }}
+  {% endfor %}
+{% endif %}
+{% endmacro %}
+
 <div class="site-name">
   <a href="{{ pathto(root_doc) }}">{{ docstitle }}</a>
 </div>
+
 {% include "components/search-input.html" %}
 <div class="toctree-container">
-  {{ toctree(titles_only=True) }}
+  <ul class="toctree">
+  {% for entry in basic_ng_site_structure.entries %}
+  {{ show_entry(entry) }}
+  {% endfor %}
+  </ul>
 </div>
