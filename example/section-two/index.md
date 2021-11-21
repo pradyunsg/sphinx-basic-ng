@@ -2,5 +2,5 @@
 
 ```{toctree}
 page-two-one
-page-two-two
+Alternative title <page-two-two>
 ```

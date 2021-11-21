@@ -6,7 +6,7 @@ simplify the development of a Sphinx theme.
 ```{toctree}
 top-level-one
 section-one/index
-section-two/index
+Second Section <section-two/index>
 top-level-two
 ```
 
@@ -20,4 +20,5 @@ pariatur dolore voluptas?
 :titlesonly:
 
 top-level-three
+external <https://example.com>
 ```
