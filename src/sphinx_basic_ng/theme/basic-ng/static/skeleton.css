@@ -249,7 +249,16 @@ article {
   .sb-footer-content__inner {
     width: 67rem;
   }
+}
+
+@media (min-width: 90rem) {
+  [role="main"] {
+    padding: 0 4rem;
+  }
+  .sb-footer-content__inner {
+    width: 67rem;
+  }
   .sb-page-width {
-    width: 84rem;
+    width: 90rem;
   }
 }
