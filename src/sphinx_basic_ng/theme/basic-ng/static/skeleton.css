@@ -141,7 +141,7 @@ article {
 
 .sb-article-container,
 .sb-footer-content__inner {
-  width: 100%;
+  width: 100vw;
 }
 
 /* Tablet views */
