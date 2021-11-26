@@ -8,10 +8,10 @@ body {
   background: lavender;
 }
 .sb-announcement {
-  background-color: rgb(131, 131, 131);
+  background: rgb(131, 131, 131);
 }
 .sb-announcement__inner {
-  background-color: black;
+  background: black;
   color: white;
 }
 .sb-header {
@@ -35,10 +35,13 @@ body {
   background: blanchedalmond;
 }
 .sb-main__inner {
-  background-color: antiquewhite;
+  background: antiquewhite;
 }
 .sb-header-article {
-  background-color: lightsteelblue;
+  background: lightsteelblue;
+}
+.sb-article-container {
+  background: snow;
 }
 .sb-article-main {
   background: white;
