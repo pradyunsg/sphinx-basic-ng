@@ -1,4 +1,4 @@
-{% if breadcrumb_include_index_as or parents or breadcrumb_include_page -%}
+{% if (breadcrumb_include_index_as and pagename != 'index') or parents or breadcrumb_include_page -%}
 <nav aria-label="Breadcrumb" class="breadcrumb-nav">
   <ol class="breadcrumb-nav-list">
     {% if breadcrumb_include_index_as and pagename != 'index' -%}
