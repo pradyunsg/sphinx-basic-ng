@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.0.1.alpha8
+
+- Improve `debug.css`.
+- Expand the breadcrumbs conditional to do the right thing.
+- Include block names in endblock, in the Jinja templates.
+- Allow for full-width content styles.
+- Extend scaffold to fit 90rem screens.
+- Add `match-content-width` for content heading and footer.
+- Use viewport width for containers on mobile.
+- Only show `edit-this-page` if `source_suffix` is known.
+- Lightly tweak example theme.
+- Present better warnings in noxfile.
+- Drop `_html_page_context`.
+- Improve `breadcrumbs.html` implementation.
+- Add clearer "not implemented" warnings.
+- Drop the overflow handling, which is incompatible with `sticky`.
+- Back to development
+
 ## 0.0.1.alpha7
 
 - Add additional breakpoint of 50rem (800px) for content width.
