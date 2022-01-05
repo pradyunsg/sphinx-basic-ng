@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.1.alpha9
+
+- Move the JS files to the end of body
+
 ## 0.0.1.alpha8
 
 - Improve `debug.css`.
