@@ -56,15 +56,15 @@
 
   {%- endblock head_stylesheets -%}
 
-  {% block head_javascript -%}
-  {% for js in script_files -%}
-    {{ js_tag(js) }}
-  {% endfor -%}
-  {%- endblock head_javascript -%}
-
+  {% block head_javascript %}{% endblock %}
   {% block head_extra %}{% endblock %}
 </head>
 <body{% block body_tag_attrs %}{% endblock %}>
   {% block body %}{% endblock body -%}
+  {% block body_javascript -%}
+  {% for js in script_files -%}
+    {{ js_tag(js) }}
+  {% endfor -%}
+  {%- endblock body_javascript -%}
 </body>
 </html>
