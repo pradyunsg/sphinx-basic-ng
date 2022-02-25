@@ -36,6 +36,13 @@
     </aside>
     {% endblock sidebar_primary %}
     <main class="sb-main">
+      {% block header_content %}
+      <header class="sb-header-content">
+        <div class="sb-header-content__inner">
+          {% include "sections/header-content.html" %}
+        </div>
+      </header>
+      {% endblock header_content %}
       <div class="sb-content">
         {% block content %}
         <div class="sb-article-container">
@@ -56,13 +63,13 @@
         </aside>
         {% endblock sidebar_secondary %}
       </div>
-    {% block footer_content %}
-    <footer class="sb-footer-content">
-      <div class="sb-footer-content__inner">
-        {% include "sections/footer-content.html" %}
-      </div>
-    </footer>
-    {% endblock footer_content %}
+      {% block footer_content %}
+      <footer class="sb-footer-content">
+        <div class="sb-footer-content__inner">
+          {% include "sections/footer-content.html" %}
+        </div>
+      </footer>
+      {% endblock footer_content %}
     </main>
   </div>
   {% endblock container %}
