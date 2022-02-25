@@ -160,6 +160,13 @@ article {
   box-sizing: border-box;
 }
 
+@media (min-width: 32rem) {
+  [role="main"],
+  .match-content-width {
+    padding: 0 2rem;
+  }
+}
+
 /* Tablet views */
 @media (min-width: 42rem) {
   .sb-article-container {
@@ -172,7 +179,6 @@ article {
   }
   [role="main"],
   .match-content-width {
-    padding: 0 2rem;
     width: 42rem;
   }
 }
@@ -285,9 +291,6 @@ article {
 }
 
 @media (min-width: 90rem) {
-  [role="main"] {
-    padding: 0 4rem;
-  }
   .sb-footer-content__inner,
   .drop-secondary-sidebar-for-full-width-content [role="main"],
   .drop-secondary-sidebar-for-full-width-content .match-content-width {
