@@ -27,8 +27,8 @@
 <label class="sb-sidebar-overlay" for="sb-sidebar-toggle--primary"></label>
 <label class="sb-sidebar-overlay" for="sb-sidebar-toggle--secondary"></label>
 
+{% block container %}
 <div class="sb-container">
-  {% block container %}
   <div class="sb-container__inner sb-page-width">
     {% block sidebar_primary %}
     <aside class="sb-sidebar-primary">
@@ -72,8 +72,8 @@
       {% endblock footer_content %}
     </main>
   </div>
-  {% endblock container %}
 </div>
+{% endblock container %}
 {% block footer %}
 <footer class="sb-footer">
   <div class="sb-footer__inner sb-page-width">
