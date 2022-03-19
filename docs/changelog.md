@@ -1,8 +1,19 @@
 # Changelog
 
+## 0.0.1.alpha10
+
+- Move the container tag inside the container block.
+- Add a new `sections/header-content.html`.
+- Implement `search.html`.
+- Implement `genindex*.html`.
+- Implement `domainindex.html`.
+- Clarify handling of overlays for sidebars.
+- Improve handling of padding around main content.
+- Increase the z-index of overlay'd sidebars.
+
 ## 0.0.1.alpha9
 
-- Move the JS files to the end of body
+- Move the JS files to the end of body.
 
 ## 0.0.1.alpha8
 
@@ -20,7 +31,6 @@
 - Improve `breadcrumbs.html` implementation.
 - Add clearer "not implemented" warnings.
 - Drop the overflow handling, which is incompatible with `sticky`.
-- Back to development
 
 ## 0.0.1.alpha7
 
@@ -28,12 +38,12 @@
 
 ## 0.0.1.alpha6
 
-- Bump up to Sphinx 4
+- Bump up to Sphinx 4.
 - Add example documentation, with an inline theme
-- Add header-article section
-- Add `!important` for the hiding of sidebar toggles
-- Fix the search input example
-- Tweak announcement container, to not be centered
+- Add header-article section.
+- Add `!important` for the hiding of sidebar toggles.
+- Fix the search input example.
+- Tweak announcement container, to not be centered.
 
 ## 0.0.1.alpha5
 
