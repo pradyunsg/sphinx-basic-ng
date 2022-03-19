@@ -8,8 +8,8 @@
 {% block content %}
 <div class="sb-article-container">
   <article role="main">
-    <div id="lutra-main-content" class="prose">
 
+{% block content_inner %}
 <section class="genindex-section">
   <h1 id="index">{{ _('Index') }}</h1>
   <div class="genindex-jumpbox">
@@ -26,6 +26,7 @@
     </a>
   </p>
 </section>
+{% endblock content_inner %}
 
-</div></article></div>
+</article></div>
 {% endblock %}

@@ -28,8 +28,8 @@
 {% block content %}
 <div class="sb-article-container">
   <article role="main">
-    <div id="lutra-main-content" class="prose">
 
+{% block content_inner %}
 <section class="genindex-section">
   <h1 id="index">{% trans key=key %}Index &ndash; {{ key }}{% endtrans %}</h1>
 </section>
@@ -52,6 +52,7 @@
     {%- endfor %}
   </tr></table>
 </section>
+{% endblock content_inner %}
 
-</div></article></div>
+</article></div>
 {% endblock %}

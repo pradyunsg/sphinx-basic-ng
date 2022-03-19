@@ -14,8 +14,8 @@
 {% block content %}
 <div class="sb-article-container">
   <article role="main">
-    <div id="lutra-main-content" class="prose">
 
+{% block content_inner %}
 <section class="domainindex-section">
   <h1>{{ indextitle }}</h1>
   <div class="domainindex-jumpbox">
@@ -52,6 +52,7 @@
   {%- endfor %}
   {%- endfor %}
 </table>
+{% endblock content_inner %}
 
-</div></article></div>
+</article></div>
 {% endblock content %}
