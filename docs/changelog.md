@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.0.1.alpha11
+
+- Declare Sphinx 5 compatibility.
+- Drop support for Python 3.6.
+
 ## 0.0.1.alpha10
 
 - Move the container tag inside the container block.
