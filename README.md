@@ -24,7 +24,6 @@ A modernised skeleton for Sphinx themes.
 
 4. Use `nox` to build a simple demo site
 
-
    ```shell
    nox -s docs-live -- ./tests/barebones
    ```

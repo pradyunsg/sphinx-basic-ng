@@ -2,6 +2,4 @@
   <a href="{{ pathto(root_doc) }}">{{ docstitle }}</a>
 </div>
 {% include "components/search-input.html" %}
-<div class="toctree-container">
-  {{ toctree(titles_only=True) }}
-</div>
+<div class="toctree-container">{{ toctree(titles_only=True) }}</div>
