@@ -36,11 +36,15 @@
   {%- endif -%}
 {%- endmacro -%}
 
-{%- if theme_source_repository -%}
-  {%- if not theme_source_branch -%}
-    {{ warning("Provided `source_repository` but not `source_branch`. ")}}
-  {%- endif -%}
-  {%- if page_source_suffix -%}
-  <a href="{{ determine_page_edit_link() }}">{{ _("Edit this page") }}</a>
+{%- if page_source_suffix -%}
+  {%- if theme_source_repository -%}
+    {%- if not theme_source_branch -%}
+      {{ warning("Provided `source_repository` but not `source_branch`. ")}}
+    {%- endif -%}
+    {% block link_available %}
+    <a href="{{ determine_page_edit_link() }}">{{ _("Edit this page") }}</a>
+    {% endblock link_available %}
+  {%- else -%}
+    {% block link_not_available %}{% endblock %}
   {%- endif -%}
 {%- endif -%}
