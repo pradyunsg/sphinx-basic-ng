@@ -14,4 +14,5 @@ related-pages
 search-hide
 search-input
 sidebar-toggles
+view-this-page
 ```
