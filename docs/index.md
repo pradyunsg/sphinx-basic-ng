@@ -1,6 +1,7 @@
 # sphinx-basic-ng
 
-A modern skeleton for Sphinx themes.
+A modern base for Sphinx themes, providing shared implementation of common
+components and a three-column layout to build upon.
 
 ```{toctree}
 :hidden:

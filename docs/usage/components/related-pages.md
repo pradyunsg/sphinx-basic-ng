@@ -1,9 +1,8 @@
-# Related pages
+# Related Pages
 
-Sphinx provides "next page" and "previous page" information, when
-rendering a page. This information is useful for documentation which
-has some sort of flow, as well as providing more navigational
-capabilities to the reader.
+Sphinx provides "next page" and "previous page" information, when rendering a
+page. This information is useful for documentation which has some sort of flow,
+as well as providing more navigational capabilities to the reader.
 
 ## Usage
 
@@ -11,7 +10,8 @@ capabilities to the reader.
 {% include "components/related-pages.html" with context %}
 ```
 
-This will add a single `div.related-pages`, which may be empty.
+This will add a single `div.related-pages`, which may be empty if the relevant
+information is not available in the html-context.
 
 The structure of this component is:
 
@@ -34,3 +34,7 @@ The structure of this component is:
 ## Configurability
 
 None.
+
+Derivative themes may want to expose their own mechanism that allows hiding this
+component for documentation authors that don't want to provide this to the
+reader.
