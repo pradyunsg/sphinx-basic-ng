@@ -5,12 +5,12 @@ __version__ = "0.0.1.dev11"
 from pathlib import Path
 from typing import Any, Dict
 
-import sphinx
+from sphinx.application import Sphinx
 
 _THEME_PATH = (Path(__file__).parent / "theme" / "basic-ng").resolve()
 
 
-def setup(app: sphinx.application.Sphinx) -> Dict[str, Any]:
+def setup(app: Sphinx) -> Dict[str, Any]:
     """Entry point for sphinx theming."""
     app.require_sphinx("3.0")
 
