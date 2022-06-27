@@ -282,7 +282,15 @@ article {
   .drop-secondary-sidebar-for-full-width-content .match-content-width {
     width: 67rem;
   }
+}
+
+@media (min-width: 88rem) {
+  .sb-footer-content__inner,
+  .drop-secondary-sidebar-for-full-width-content [role="main"],
+  .drop-secondary-sidebar-for-full-width-content .match-content-width {
+    width: 67rem;
+  }
   .sb-page-width {
-    width: 84rem;
+    width: 88rem;
   }
 }
