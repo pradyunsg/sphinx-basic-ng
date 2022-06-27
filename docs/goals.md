@@ -21,6 +21,6 @@ Sphinx theme authors on how to implement various common things in Sphinx themes
 
 This theme does not provide:
 
-- components that require a Python code to implement them.
+- components that require any Python or Javascript to implement them.
 - styling for any of the components.
 - any styling beyond what is necessary for the skeleton markup.
