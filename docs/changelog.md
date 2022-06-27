@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.0.1.alpha12
+
+- Add a `view-this-page` component
+- Improve `edit-this-page` component's extensibility
+- Lint the entire codebase with prettier
+- Expand the documentation with more content
+- Tweak the size of the highest breakpoint
+
 ## 0.0.1.alpha11
 
 - Declare Sphinx 5 compatibility.
