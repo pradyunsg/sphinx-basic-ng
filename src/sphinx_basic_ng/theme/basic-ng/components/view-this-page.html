@@ -49,7 +49,7 @@
 
 {%- if page_source_suffix -%}
   {%- set can_find_view_link = (
-    theme_source_view_link
+    (theme_source_view_link and pagename)
     or (show_source and has_source and sourcename)
     or (theme_source_repository and theme_source_branch)
   ) -%}

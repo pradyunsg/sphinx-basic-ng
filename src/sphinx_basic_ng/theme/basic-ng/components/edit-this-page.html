@@ -46,7 +46,7 @@
 
 {%- if page_source_suffix -%}
   {%- set can_find_edit_link = (
-    theme_source_edit_link
+    (theme_source_edit_link and pagename)
     or (theme_source_repository and theme_source_branch)
   ) -%}
   {%- if can_find_edit_link -%}
