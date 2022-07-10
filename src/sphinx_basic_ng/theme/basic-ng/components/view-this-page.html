@@ -3,7 +3,7 @@
 {%- macro determine_page_view_link() -%}
   {%- if theme_source_view_link -%}
     {{ theme_source_view_link.format(filename=pagename+page_source_suffix) }}
-  {%- else -%}
+  {%- elif theme_source_repository -%}
     {#- First, sanitise the trailing slashes. -#}
     {%- set repo = sanitise_trailing_slash(theme_source_repository) -%}
     {%- set branch = theme_source_branch -%}
@@ -40,6 +40,9 @@
         "You should set `source_view_link`, so that the view link is presented."
       ) }}
     {%- endif -%}
+  {%- elif show_source and has_source -%}
+    {{ pathto('_sources/' + sourcename, true) }}
+  {%- endif -%}
   {%- endif -%}
 {%- endmacro -%}
 
@@ -47,6 +50,7 @@
 {%- if page_source_suffix -%}
   {%- set can_find_view_link = (
     theme_source_view_link
+    or (show_source and has_source and sourcename)
     or (theme_source_repository and theme_source_branch)
   ) -%}
   {%- if can_find_view_link -%}

@@ -13,6 +13,11 @@ to the source repository of the project.
 
 This will add a single `a[href]` tag, with the text "View this page".
 
+This uses the user-provided source repository links if provided. If they're not
+provided and the documentation is built with `html_copy_source = True` _and_
+`html_show_sourcelink = True` (which are the default), the link points to the
+Sphinx-copied sources.
+
 You also need to declare the following in `theme.conf`'s `options` section:
 
 ```ini
