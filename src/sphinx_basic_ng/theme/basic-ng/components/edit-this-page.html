@@ -5,6 +5,27 @@
   {%- set repo = sanitise_trailing_slash(theme_source_repository) -%}
   {%- set branch = theme_source_branch -%}
   {%- set subdirectory = sanitise_trailing_slash(theme_source_directory) -%}
+  {%- set provider = theme_source_provider -%}
+  
+  {%- if not provider -%}
+    {#- Don't allow http:// URLs -#}
+    {%- if repo.startswith(
+      (
+        "http://github.com/",
+        "http://gitlab.com/",
+        "http://bitbucket.org/",
+      )
+    ) -%}
+      {{ warning("Could not use `source_repository` provided. Please use https:// links in your `conf.py` file's `html_theme_options`.") }}
+    {#- Handle the relevant cases -#}
+    {%- elif repo.startswith("https://github.com/") -%}
+      {%- set provider = "github" -%}
+    {%- elif repo.startswith("https://gitlab.com/") -%}
+      {%- set provider = "gitlab" -%}
+    {%- elif repo.startswith("https://bitbucket.org/") -%}
+      {%- set provider = "bitbucket" -%}
+    {%- endif -%}
+  {%- endif -%}
 
   {#- Figure out the document's source file path. -#}
   {%- set relative_path = pagename + page_source_suffix -%}
@@ -13,26 +34,16 @@
   {%- else -%}
     {%- set document_path = subdirectory + "/" + relative_path -%}
   {%- endif -%}
-
-  {#- Don't allow http:// URLs -#}
-  {%- if repo.startswith(
-    (
-      "http://github.com/",
-      "http://gitlab.com/",
-      "http://bitbucket.org/",
-    )
-  ) -%}
-    {{ warning("Could not use `source_repository` provided. Please use https:// links in your `conf.py` file's `html_theme_options`.") }}
-  {#- Handle the relevant cases -#}
-  {%- elif repo.startswith("https://github.com/") -%}
+  
+  {%- if provider == "github" -%}
     {{ repo }}/edit/{{ branch }}/{{ document_path }}
-  {%- elif repo.startswith("https://gitlab.com/") -%}
+  {%- elif provider == "gitlab" -%}
     {{ repo }}/-/edit/{{ branch }}/{{ document_path }}
-  {%- elif repo.startswith("https://bitbucket.org/") -%}
+  {%- elif provider == "bitbucket" -%}
     {{ repo }}/src/{{ branch }}/{{ document_path }}?mode=edit&at={{ branch }}
   {#- Fail with a warning -#}
   {%- else -%}
-    {{ warning("Could not understand `source_repository` provided: " + repo) }}
+    {{ warning("`source_provider` <" + provider + "> not known and cannot be extracted from `source_repository` provided: " + repo) }}
   {%- endif -%}
 {%- endmacro -%}
 
