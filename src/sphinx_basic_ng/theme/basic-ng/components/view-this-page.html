@@ -28,7 +28,7 @@
       {{ warning("Could not use `source_repository` provided. Please use https:// links in your `conf.py` file's `html_theme_options`.") }}
     {#- Handle the relevant cases -#}
     {%- elif repo.startswith("https://github.com/") -%}
-      {{ repo }}/blob/{{ branch }}/{{ document_path }}?plain=true
+      {{ repo }}/blob/{{ branch }}/{{ document_path }}?plain=1
     {%- elif repo.startswith("https://gitlab.com/") -%}
       {{ repo }}/blob/{{ branch }}/{{ document_path }}
     {%- elif repo.startswith("https://bitbucket.org/") -%}
