@@ -23,6 +23,7 @@
         "http://github.com/",
         "http://gitlab.com/",
         "http://bitbucket.org/",
+        "http://codeberg.org/",
       )
     ) -%}
       {{ warning("Could not use `source_repository` provided. Please use https:// links in your `conf.py` file's `html_theme_options`.") }}
@@ -33,6 +34,8 @@
       {{ repo }}/-/edit/{{ branch }}/{{ document_path }}
     {%- elif repo.startswith("https://bitbucket.org/") -%}
       {{ repo }}/src/{{ branch }}/{{ document_path }}?mode=edit&at={{ branch }}
+    {%- elif repo.startswith("https://codeberg.org/") -%}
+      {{ repo }}/_edit/{{ branch }}/{{ document_path }}
     {#- Fail with a warning -#}
     {%- else -%}
       {{ warning(
