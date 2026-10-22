@@ -90,14 +90,14 @@ def example(session):
 
 @nox.session(reuse_venv=True)
 def lint(session):
-    session.install("pre-commit")
+    session.install("prek")
 
     args = list(session.posargs)
     args.append("--all-files")
     if "CI" in os.environ:
         args.append("--show-diff-on-failure")
 
-    session.run("pre-commit", "run", *args)
+    session.run("prek", "run", *args)
 
 
 def get_release_versions(version_file):
@@ -157,7 +157,12 @@ def release(session):
     # Tag the commit
     session.run(
         # fmt: off
-        "git", "tag", release_version, "-m", f"Release {release_version}", "-s",
+        "git",
+        "tag",
+        release_version,
+        "-m",
+        f"Release {release_version}",
+        "-s",
         external=True,
         # fmt: on
     )
