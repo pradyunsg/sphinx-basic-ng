@@ -14,3 +14,9 @@ recursive-include src *.conf
 recursive-include src *.html
 recursive-include src *.css
 recursive-include src *.js
+
+exclude .prettierrc.toml
+exclude .readthedocs.yml
+recursive-include docs *.txt
+recursive-include example *.css *.html *.md *.py *.txt
+recursive-include tests *.md *.py
