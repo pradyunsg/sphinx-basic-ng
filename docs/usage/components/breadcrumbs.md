@@ -27,7 +27,7 @@ breadcrumbs with this structure.
 
 ## Configurability
 
-There are 2 values that can be provided via the html-context, which provide
+There are 3 values that can be provided via the html-context, which provide
 control over the components shown in the breadcrumbs:
 
 - `breadcrumb_include_index_as`: If provided, this name is used as the first
@@ -39,6 +39,9 @@ control over the components shown in the breadcrumbs:
   breadcrumb as the final list-item, with only a `span` (there's no `a[href]` in
   it). The corresponding list-item will have an additional class:
   `breadcrumb-nav-page-item`.
+
+- `breadcrumb_show_without_parents`: If truthy, show breadcrumbs if there are
+  no links to "parent" pages and only the current page.
 
 [w3schools-breadcrumbs]:
   https://www.w3schools.com/howto/howto_css_breadcrumbs.asp
